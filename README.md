@@ -1,1 +1,3 @@
-# finance-assistant
+# Finance Assistant
+
+
