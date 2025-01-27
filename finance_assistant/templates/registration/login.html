@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+
+{% comment %} Without doing anything ye form aagaya {% endcomment %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>Login</button>
+
+    </form>
+{% endblock %}

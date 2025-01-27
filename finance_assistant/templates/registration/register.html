@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block content %}
+    <form  method="post"> 
+        {% csrf_token %}   
+        {{ form.as_p }}
+    <button type="submit">Register</button>
+    </form>
+{% endblock %}
+
+
+{% comment %} 
+
+There is no register url --> define karna padega alag se
+
+
+Using the URLconf defined in finance_assistant.urls, Django tried these URL patterns, in this order:
+
+admin/
+[name='home']
+chatbot/
+__reload__/
+accounts/ login/ [name='login']
+accounts/ logout/ [name='logout']
+accounts/ password_change/ [name='password_change']
+accounts/ password_change/done/ [name='password_change_done']
+accounts/ password_reset/ [name='password_reset']
+accounts/ password_reset/done/ [name='password_reset_done']
+accounts/ reset/<uidb64>/<token>/ [name='password_reset_confirm']
+accounts/ reset/done/ [name='password_reset_complete']
+^media/(?P<path>.*)$
+The current path, accounts/register, didn’t match any of these. {% endcomment %}

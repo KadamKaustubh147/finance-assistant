@@ -5,6 +5,18 @@
 {% endblock %}
 
 {% block content %}
-Harsh mota billa
+{% comment %} Harsh mota billa {% endcomment %}
+
+
+Welcome {{ user }}
+
+
+      {% if user.is_authenticated %}
+      <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+      <button class="" type="submit">Logout</button>
+      </form>
+      {% else %}
+      {% endif %}
 
 {% endblock %}
